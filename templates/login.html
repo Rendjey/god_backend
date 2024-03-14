@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Login</title>
+</head>
+<body>
+    
+    {% if message %}
+        <h1>{{ message }}</h1>
+    {% endif %}
+
+    {% if message_of_auth %}
+        <h2>{{ message_of_auth }}</h2>
+    {% endif %}
+    
+</body>
+</html>
