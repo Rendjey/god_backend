@@ -8,7 +8,6 @@ def kill_reg(conn):
     victim = str(data['victim'])
     
     cur = conn.cursor()
-    #conn.commit()
 
     ## Select Killer ID & login 
     cur.execute("SELECT ID, login FROM reg_auth_card_db WHERE login = %s", [killer])
@@ -27,15 +26,12 @@ def kill_reg(conn):
     HdPz_killer = round((float(HdPz_killer_fetch_str)), 2)
     kills_killer = int(kills_fetch_killer_fetch_str)
 
-
-
     ## Select Victim ID & login
     cur.execute("SELECT ID, login FROM reg_auth_card_db WHERE login = %s", [victim])
 
     id_fetch, login_fetch = cur.fetchone()
     id_victim = re.sub("[^A-Za-z0-9]", "", str(id_fetch))
     login_victim = re.sub("[^A-Za-z0-9]", "", str(login_fetch))
-    
     
     #Victim balance
     cur.execute("SELECT balance, HdPz FROM dynamic_session_db WHERE ID = %s", [id_victim])
