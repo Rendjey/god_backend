@@ -34,6 +34,7 @@ def kill_reg(conn):
     id_victim = re.sub("[^A-Za-z0-9]", "", str(id_fetch))
     login_victim = re.sub("[^A-Za-z0-9]", "", str(login_fetch))
     
+    
     #Victim balance
     cur.execute("SELECT balance, HdPz FROM dynamic_session_db WHERE ID = %s", [id_victim])
     balance_fetch, HdPz_fetch = cur.fetchone()
