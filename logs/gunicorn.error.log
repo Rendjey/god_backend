@@ -36,3 +36,19 @@ Traceback (most recent call last):
   File "/home/flaskapp/functions/kill_reg.py", line 23, in kill_reg
     balance_fetch, HdPz_fetch, kills_fetch = cur.fetchone()
 TypeError: cannot unpack non-iterable NoneType object
+[2024-03-20 13:49:38 +0300] [1797013] [INFO] Worker exiting (pid: 1797013)
+[2024-03-20 13:49:38 +0300] [1797010] [INFO] Handling signal: term
+[2024-03-20 13:49:39 +0300] [1797010] [WARNING] Worker with pid 1797013 was terminated due to signal 15
+[2024-03-20 13:49:39 +0300] [1797010] [INFO] Shutting down: Master
+[2024-03-20 13:50:02 +0300] [579] [INFO] Starting gunicorn 20.1.0
+[2024-03-20 13:50:02 +0300] [579] [INFO] Listening at: http://0.0.0.0:5000 (579)
+[2024-03-20 13:50:02 +0300] [579] [INFO] Using worker: sync
+[2024-03-20 13:50:02 +0300] [717] [INFO] Booting worker with pid: 717
+[2024-03-20 13:53:24 +0300] [717] [INFO] Worker exiting (pid: 717)
+[2024-03-20 13:53:25 +0300] [579] [INFO] Handling signal: term
+[2024-03-20 13:53:25 +0300] [579] [WARNING] Worker with pid 717 was terminated due to signal 15
+[2024-03-20 13:53:25 +0300] [579] [INFO] Shutting down: Master
+[2024-03-20 13:53:44 +0300] [577] [INFO] Starting gunicorn 20.1.0
+[2024-03-20 13:53:44 +0300] [577] [INFO] Listening at: http://0.0.0.0:5000 (577)
+[2024-03-20 13:53:44 +0300] [577] [INFO] Using worker: sync
+[2024-03-20 13:53:44 +0300] [705] [INFO] Booting worker with pid: 705
