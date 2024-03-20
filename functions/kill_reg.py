@@ -28,6 +28,7 @@ def kill_reg(conn):
     kills_killer = int(kills_fetch_killer_fetch_str)
 
 
+
     ## Select Victim ID & login
     cur.execute("SELECT ID, login FROM reg_auth_card_db WHERE login = %s", [victim])
 
