@@ -8,10 +8,10 @@ def kill_reg(conn):
     victim = str(data['victim'])
     
     cur = conn.cursor()
-    
-    #Killer block
+    #conn.commit()
+
+    ## Select Killer ID & login 
     cur.execute("SELECT ID, login FROM reg_auth_card_db WHERE login = %s", [killer])
-    conn.commit()
 
     id_fetch, login_fetch = cur.fetchone()
     id_killer = re.sub("[^A-Za-z0-9]", "", str(id_fetch))
@@ -24,12 +24,10 @@ def kill_reg(conn):
     balance_killer_str = re.sub("[^A-Za-z0-9.]", "", str(balance_fetch))
     HdPz_killer_fetch_str = re.sub("[^A-Za-z0-9.]", "", str(HdPz_fetch))
     kills_fetch_killer_fetch_str = re.sub("[^A-Za-z0-9]", "", str(kills_fetch))
-    balance_killer = round((float(balance_killer_str) + 0.1), 2)
     HdPz_killer = round((float(HdPz_killer_fetch_str)), 2)
     kills_killer = int(kills_fetch_killer_fetch_str)
-    cur.execute("UPDATE dynamic_session_db SET balance = %s WHERE ID = %s", [str(balance_killer), str(id_killer)])
 
-    #Victim block
+    ## Select Victim ID & login
     cur.execute("SELECT ID, login FROM reg_auth_card_db WHERE login = %s", [victim])
 
     id_fetch, login_fetch = cur.fetchone()
@@ -44,13 +42,34 @@ def kill_reg(conn):
     balance_victim = round((float(balance_victim_str) - 0.2), 2)
     HdPz_victim = round((float(HdPz_victim_fetch_str)), 2)
     cur.execute("UPDATE dynamic_session_db SET balance = %s WHERE ID = %s", [str(balance_victim), str(id_victim)])
-    HdPz_killer = round((float(HdPz_killer + HdPz_victim + float(0.05))), 2)
-    
-    if(kills_killer <= 8):
+
+    HdPz_killer_012 = round((float(HdPz_killer + HdPz_victim + float(0.02))), 2)
+    HdPz_killer_345 = round((float(HdPz_killer + HdPz_victim + float(0.03))), 2)
+    HdPz_killer_678 = round((float(HdPz_killer + HdPz_victim + float(0.04))), 2)
+
+    if(kills_killer == 0 or kills_killer == 1 or kills_killer == 2):
+        balance_killer = round((float(balance_killer_str) + 0.13), 2)
+        cur.execute("UPDATE dynamic_session_db SET balance = %s WHERE ID = %s", [str(balance_killer), str(id_killer)])
         kills_killer = kills_killer + 1
-        cur.execute("UPDATE dynamic_session_db SET HdPz = %s WHERE ID = %s", [str(HdPz_killer), str(id_killer)])
+        cur.execute("UPDATE dynamic_session_db SET HdPz = %s WHERE ID = %s", [str(HdPz_killer_012), str(id_killer)])
         cur.execute("UPDATE dynamic_session_db SET kills = %s WHERE ID = %s", [str(kills_killer), str(id_killer)])
-    else:
+        ##
+    elif(kills_killer == 3 or kills_killer == 4 or kills_killer == 5):
+        balance_killer = round((float(balance_killer_str) + 0.12), 2)
+        cur.execute("UPDATE dynamic_session_db SET balance = %s WHERE ID = %s", [str(balance_killer), str(id_killer)])
+        kills_killer = kills_killer + 1
+        cur.execute("UPDATE dynamic_session_db SET HdPz = %s WHERE ID = %s", [str(HdPz_killer_345), str(id_killer)])
+        cur.execute("UPDATE dynamic_session_db SET kills = %s WHERE ID = %s", [str(kills_killer), str(id_killer)])
+        ##
+    elif(kills_killer == 6 or kills_killer == 7 or kills_killer == 8):
+        balance_killer = round((float(balance_killer_str) + 0.11), 2)
+        cur.execute("UPDATE dynamic_session_db SET balance = %s WHERE ID = %s", [str(balance_killer), str(id_killer)])
+        kills_killer = kills_killer + 1
+        cur.execute("UPDATE dynamic_session_db SET HdPz = %s WHERE ID = %s", [str(HdPz_killer_678), str(id_killer)])
+        cur.execute("UPDATE dynamic_session_db SET kills = %s WHERE ID = %s", [str(kills_killer), str(id_killer)])
+        ##
+    elif(kills_killer == 9):
+        balance_killer = round((float(balance_killer_str) + 0.11), 2)
         balance_killer = round((float(balance_killer + HdPz_killer)), 2)
         cur.execute("UPDATE dynamic_session_db SET balance = %s WHERE ID = %s", [str(balance_killer), str(id_killer)])
         HdPz_killer = 0
