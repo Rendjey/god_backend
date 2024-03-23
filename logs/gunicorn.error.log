@@ -52,3 +52,767 @@ TypeError: cannot unpack non-iterable NoneType object
 [2024-03-20 13:53:44 +0300] [577] [INFO] Listening at: http://0.0.0.0:5000 (577)
 [2024-03-20 13:53:44 +0300] [577] [INFO] Using worker: sync
 [2024-03-20 13:53:44 +0300] [705] [INFO] Booting worker with pid: 705
+[2024-03-20 14:15:41 +0300] [2686] [INFO] Starting gunicorn 20.1.0
+[2024-03-20 14:15:41 +0300] [2686] [INFO] Listening at: http://0.0.0.0:5000 (2686)
+[2024-03-20 14:15:41 +0300] [2686] [INFO] Using worker: sync
+[2024-03-20 14:15:41 +0300] [2689] [INFO] Booting worker with pid: 2689
+[2024-03-20 14:23:16 +0300] [2686] [INFO] Handling signal: term
+[2024-03-20 14:23:16 +0300] [2689] [INFO] Worker exiting (pid: 2689)
+[2024-03-20 14:23:16 +0300] [2686] [WARNING] Worker with pid 2689 was terminated due to signal 15
+[2024-03-20 14:23:16 +0300] [2686] [INFO] Shutting down: Master
+[2024-03-20 14:23:17 +0300] [2897] [INFO] Starting gunicorn 20.1.0
+[2024-03-20 14:23:17 +0300] [2897] [INFO] Listening at: http://0.0.0.0:5000 (2897)
+[2024-03-20 14:23:17 +0300] [2897] [INFO] Using worker: sync
+[2024-03-20 14:23:17 +0300] [2900] [INFO] Booting worker with pid: 2900
+[2024-03-20 17:19:28,505] ERROR in app: Exception on /test_server_controler/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 75, in test_server_controler
+    pr = server_controller_test(conn)
+  File "/home/flaskapp/functions/server_contoller_test.py", line 94, in server_controller_test
+    last_login = logins_sorted[1]
+IndexError: list index out of range
+[2024-03-21 00:30:58 +0300] [2897] [CRITICAL] WORKER TIMEOUT (pid:2900)
+[2024-03-21 00:30:58 +0300] [2900] [INFO] Worker exiting (pid: 2900)
+[2024-03-21 00:30:58 +0300] [13700] [INFO] Booting worker with pid: 13700
+[2024-03-21 08:24:25 +0300] [2897] [CRITICAL] WORKER TIMEOUT (pid:13700)
+[2024-03-21 08:24:25 +0300] [13700] [INFO] Worker exiting (pid: 13700)
+[2024-03-21 08:24:25 +0300] [33660] [INFO] Booting worker with pid: 33660
+[2024-03-21 15:50:17 +0300] [2897] [CRITICAL] WORKER TIMEOUT (pid:33660)
+[2024-03-21 15:50:17 +0300] [33660] [INFO] Worker exiting (pid: 33660)
+[2024-03-21 15:50:17 +0300] [40215] [INFO] Booting worker with pid: 40215
+[2024-03-21 17:46:17 +0300] [2897] [CRITICAL] WORKER TIMEOUT (pid:40215)
+[2024-03-21 17:46:17 +0300] [40215] [INFO] Worker exiting (pid: 40215)
+[2024-03-21 17:46:17 +0300] [42274] [INFO] Booting worker with pid: 42274
+[2024-03-23 03:12:30 +0300] [2897] [CRITICAL] WORKER TIMEOUT (pid:42274)
+[2024-03-23 03:12:30 +0300] [42274] [INFO] Worker exiting (pid: 42274)
+[2024-03-23 03:12:30 +0300] [151962] [INFO] Booting worker with pid: 151962
+[2024-03-23 22:58:28 +0300] [2897] [INFO] Handling signal: term
+[2024-03-23 22:58:28 +0300] [151962] [INFO] Worker exiting (pid: 151962)
+[2024-03-23 22:58:28 +0300] [2897] [INFO] Shutting down: Master
+[2024-03-23 22:58:29 +0300] [193970] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 22:58:29 +0300] [193970] [INFO] Listening at: http://0.0.0.0:5000 (193970)
+[2024-03-23 22:58:29 +0300] [193970] [INFO] Using worker: sync
+[2024-03-23 22:58:29 +0300] [193972] [INFO] Booting worker with pid: 193972
+[2024-03-23 22:58:46,401] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 105, in kill_reg
+    profit_fetch_float = float(balance_killer_str) + float(HdPz_killer_p) + float(profit_fetch_str)
+ValueError: could not convert string to float: 'None'
+[2024-03-23 23:00:01,326] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 128, in kill_reg
+    "ovpz_killer": str(ovpz_killer),
+UnboundLocalError: local variable 'ovpz_killer' referenced before assignment
+[2024-03-23 23:00:23,535] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 128, in kill_reg
+    "ovpz_killer": str(ovpz_killer),
+UnboundLocalError: local variable 'ovpz_killer' referenced before assignment
+[2024-03-23 23:00:44,338] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 128, in kill_reg
+    "ovpz_killer": str(ovpz_killer),
+UnboundLocalError: local variable 'ovpz_killer' referenced before assignment
+[2024-03-23 23:03:21,414] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 105, in kill_reg
+    profit_fetch_float = float(balance_killer_str) + float(HdPz_killer_p) + float(profit_fetch_str)
+ValueError: could not convert string to float: 'None'
+[2024-03-23 23:12:25 +0300] [193970] [INFO] Handling signal: term
+[2024-03-23 23:12:25 +0300] [193972] [INFO] Worker exiting (pid: 193972)
+[2024-03-23 23:12:25 +0300] [193970] [WARNING] Worker with pid 193972 was terminated due to signal 15
+[2024-03-23 23:12:25 +0300] [193970] [INFO] Shutting down: Master
+[2024-03-23 23:12:26 +0300] [194230] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:12:26 +0300] [194230] [INFO] Listening at: http://0.0.0.0:5000 (194230)
+[2024-03-23 23:12:26 +0300] [194230] [INFO] Using worker: sync
+[2024-03-23 23:12:26 +0300] [194233] [INFO] Booting worker with pid: 194233
+[2024-03-23 23:13:10 +0300] [194230] [INFO] Handling signal: term
+[2024-03-23 23:13:10 +0300] [194233] [INFO] Worker exiting (pid: 194233)
+[2024-03-23 23:13:10 +0300] [194230] [INFO] Shutting down: Master
+[2024-03-23 23:13:10 +0300] [194272] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:13:10 +0300] [194272] [INFO] Listening at: http://0.0.0.0:5000 (194272)
+[2024-03-23 23:13:10 +0300] [194272] [INFO] Using worker: sync
+[2024-03-23 23:13:10 +0300] [194274] [INFO] Booting worker with pid: 194274
+[2024-03-23 23:13:24 +0300] [194272] [INFO] Handling signal: term
+[2024-03-23 23:13:24 +0300] [194274] [INFO] Worker exiting (pid: 194274)
+[2024-03-23 23:13:24 +0300] [194272] [INFO] Shutting down: Master
+[2024-03-23 23:13:24 +0300] [194314] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:13:24 +0300] [194314] [INFO] Listening at: http://0.0.0.0:5000 (194314)
+[2024-03-23 23:13:24 +0300] [194314] [INFO] Using worker: sync
+[2024-03-23 23:13:24 +0300] [194316] [INFO] Booting worker with pid: 194316
+[2024-03-23 23:13:25,973] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 105, in kill_reg
+    profit_fetch_float = float(balance_killer_str) + float(HdPz_killer_p) + float(profit_fetch_str)
+ValueError: could not convert string to float: 'None'
+[2024-03-23 23:13:32 +0300] [194314] [INFO] Handling signal: term
+[2024-03-23 23:13:32 +0300] [194316] [INFO] Worker exiting (pid: 194316)
+[2024-03-23 23:13:32 +0300] [194314] [INFO] Shutting down: Master
+[2024-03-23 23:13:32 +0300] [194351] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:13:32 +0300] [194351] [INFO] Listening at: http://0.0.0.0:5000 (194351)
+[2024-03-23 23:13:32 +0300] [194351] [INFO] Using worker: sync
+[2024-03-23 23:13:32 +0300] [194353] [INFO] Booting worker with pid: 194353
+[2024-03-23 23:13:43 +0300] [194351] [INFO] Handling signal: term
+[2024-03-23 23:13:43 +0300] [194353] [INFO] Worker exiting (pid: 194353)
+[2024-03-23 23:13:43 +0300] [194351] [INFO] Shutting down: Master
+[2024-03-23 23:13:44 +0300] [194389] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:13:44 +0300] [194389] [INFO] Listening at: http://0.0.0.0:5000 (194389)
+[2024-03-23 23:13:44 +0300] [194389] [INFO] Using worker: sync
+[2024-03-23 23:13:44 +0300] [194391] [INFO] Booting worker with pid: 194391
+[2024-03-23 23:13:45,656] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 105, in kill_reg
+    profit_fetch_float = float(balance_killer_str) + float(HdPz_killer_p) + float(profit_fetch_str)
+ValueError: could not convert string to float: 'None'
+[2024-03-23 23:13:58 +0300] [194389] [INFO] Handling signal: term
+[2024-03-23 23:13:58 +0300] [194391] [INFO] Worker exiting (pid: 194391)
+[2024-03-23 23:13:58 +0300] [194389] [INFO] Shutting down: Master
+[2024-03-23 23:13:58 +0300] [194431] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:13:58 +0300] [194431] [INFO] Listening at: http://0.0.0.0:5000 (194431)
+[2024-03-23 23:13:58 +0300] [194431] [INFO] Using worker: sync
+[2024-03-23 23:13:58 +0300] [194433] [INFO] Booting worker with pid: 194433
+[2024-03-23 23:14:00,451] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 105, in kill_reg
+    profit_fetch_float = float(balance_killer_str) + float(HdPz_killer_p) + float(profit_fetch_str)
+ValueError: could not convert string to float: 'None'
+[2024-03-23 23:14:05 +0300] [194431] [INFO] Handling signal: term
+[2024-03-23 23:14:05 +0300] [194433] [INFO] Worker exiting (pid: 194433)
+[2024-03-23 23:14:05 +0300] [194431] [INFO] Shutting down: Master
+[2024-03-23 23:14:05 +0300] [194465] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:14:05 +0300] [194465] [INFO] Listening at: http://0.0.0.0:5000 (194465)
+[2024-03-23 23:14:05 +0300] [194465] [INFO] Using worker: sync
+[2024-03-23 23:14:05 +0300] [194467] [INFO] Booting worker with pid: 194467
+[2024-03-23 23:15:18 +0300] [194467] [INFO] Worker exiting (pid: 194467)
+[2024-03-23 23:15:18 +0300] [194465] [INFO] Handling signal: term
+[2024-03-23 23:15:18 +0300] [194465] [WARNING] Worker with pid 194467 was terminated due to signal 15
+[2024-03-23 23:15:18 +0300] [194465] [INFO] Shutting down: Master
+[2024-03-23 23:15:19 +0300] [194520] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:15:19 +0300] [194520] [INFO] Listening at: http://0.0.0.0:5000 (194520)
+[2024-03-23 23:15:19 +0300] [194520] [INFO] Using worker: sync
+[2024-03-23 23:15:19 +0300] [194522] [INFO] Booting worker with pid: 194522
+[2024-03-23 23:15:42 +0300] [194522] [INFO] Worker exiting (pid: 194522)
+[2024-03-23 23:15:42 +0300] [194520] [INFO] Handling signal: term
+[2024-03-23 23:15:42 +0300] [194520] [WARNING] Worker with pid 194522 was terminated due to signal 15
+[2024-03-23 23:15:42 +0300] [194520] [INFO] Shutting down: Master
+[2024-03-23 23:15:42 +0300] [194563] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:15:42 +0300] [194563] [INFO] Listening at: http://0.0.0.0:5000 (194563)
+[2024-03-23 23:15:42 +0300] [194563] [INFO] Using worker: sync
+[2024-03-23 23:15:42 +0300] [194565] [INFO] Booting worker with pid: 194565
+[2024-03-23 23:15:53 +0300] [194563] [INFO] Handling signal: term
+[2024-03-23 23:15:53 +0300] [194565] [INFO] Worker exiting (pid: 194565)
+[2024-03-23 23:15:54 +0300] [194563] [INFO] Shutting down: Master
+[2024-03-23 23:15:54 +0300] [194601] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:15:54 +0300] [194601] [INFO] Listening at: http://0.0.0.0:5000 (194601)
+[2024-03-23 23:15:54 +0300] [194601] [INFO] Using worker: sync
+[2024-03-23 23:15:54 +0300] [194603] [INFO] Booting worker with pid: 194603
+[2024-03-23 23:16:02 +0300] [194601] [INFO] Handling signal: term
+[2024-03-23 23:16:02 +0300] [194603] [INFO] Worker exiting (pid: 194603)
+[2024-03-23 23:16:03 +0300] [194601] [INFO] Shutting down: Master
+[2024-03-23 23:16:03 +0300] [194635] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:16:03 +0300] [194635] [INFO] Listening at: http://0.0.0.0:5000 (194635)
+[2024-03-23 23:16:03 +0300] [194635] [INFO] Using worker: sync
+[2024-03-23 23:16:03 +0300] [194637] [INFO] Booting worker with pid: 194637
+[2024-03-23 23:16:10 +0300] [194635] [INFO] Handling signal: term
+[2024-03-23 23:16:10 +0300] [194637] [INFO] Worker exiting (pid: 194637)
+[2024-03-23 23:16:10 +0300] [194635] [INFO] Shutting down: Master
+[2024-03-23 23:16:10 +0300] [194658] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:16:10 +0300] [194658] [INFO] Listening at: http://0.0.0.0:5000 (194658)
+[2024-03-23 23:16:10 +0300] [194658] [INFO] Using worker: sync
+[2024-03-23 23:16:10 +0300] [194663] [INFO] Booting worker with pid: 194663
+[2024-03-23 23:16:11,869] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 27, in kill_reg
+    profit_fetch_str = re.sub("[^]", "", str(profit_fetch))
+  File "/usr/lib/python3.10/re.py", line 209, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+  File "/usr/lib/python3.10/re.py", line 303, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python3.10/sre_compile.py", line 788, in compile
+    p = sre_parse.parse(p, flags)
+  File "/usr/lib/python3.10/sre_parse.py", line 955, in parse
+    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
+  File "/usr/lib/python3.10/sre_parse.py", line 444, in _parse_sub
+    itemsappend(_parse(source, state, verbose, nested + 1,
+  File "/usr/lib/python3.10/sre_parse.py", line 550, in _parse
+    raise source.error("unterminated character set",
+re.error: unterminated character set at position 0
+[2024-03-23 23:16:41 +0300] [194663] [INFO] Worker exiting (pid: 194663)
+[2024-03-23 23:16:41 +0300] [194658] [INFO] Handling signal: term
+[2024-03-23 23:16:41 +0300] [194658] [INFO] Shutting down: Master
+[2024-03-23 23:16:41 +0300] [194702] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:16:41 +0300] [194702] [INFO] Listening at: http://0.0.0.0:5000 (194702)
+[2024-03-23 23:16:41 +0300] [194702] [INFO] Using worker: sync
+[2024-03-23 23:16:41 +0300] [194704] [INFO] Booting worker with pid: 194704
+[2024-03-23 23:16:47 +0300] [194704] [INFO] Worker exiting (pid: 194704)
+[2024-03-23 23:16:47 +0300] [194702] [INFO] Handling signal: term
+[2024-03-23 23:16:47 +0300] [194702] [INFO] Shutting down: Master
+[2024-03-23 23:16:48 +0300] [194738] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:16:48 +0300] [194738] [INFO] Listening at: http://0.0.0.0:5000 (194738)
+[2024-03-23 23:16:48 +0300] [194738] [INFO] Using worker: sync
+[2024-03-23 23:16:48 +0300] [194740] [INFO] Booting worker with pid: 194740
+[2024-03-23 23:17:00 +0300] [194738] [INFO] Handling signal: term
+[2024-03-23 23:17:00 +0300] [194740] [INFO] Worker exiting (pid: 194740)
+[2024-03-23 23:17:00 +0300] [194738] [INFO] Shutting down: Master
+[2024-03-23 23:17:01 +0300] [194776] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:17:01 +0300] [194776] [INFO] Listening at: http://0.0.0.0:5000 (194776)
+[2024-03-23 23:17:01 +0300] [194776] [INFO] Using worker: sync
+[2024-03-23 23:17:01 +0300] [194778] [INFO] Booting worker with pid: 194778
+[2024-03-23 23:17:02,216] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 108, in kill_reg
+    profit_fetch_float = float(balance_killer_str) + float(HdPz_killer_p) + float(profit_fetch_str)
+ValueError: could not convert string to float: ''
+[2024-03-23 23:17:20 +0300] [194778] [INFO] Worker exiting (pid: 194778)
+[2024-03-23 23:17:20 +0300] [194776] [INFO] Handling signal: term
+[2024-03-23 23:17:20 +0300] [194776] [WARNING] Worker with pid 194778 was terminated due to signal 15
+[2024-03-23 23:17:20 +0300] [194776] [INFO] Shutting down: Master
+[2024-03-23 23:17:20 +0300] [194819] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:17:20 +0300] [194819] [INFO] Listening at: http://0.0.0.0:5000 (194819)
+[2024-03-23 23:17:20 +0300] [194819] [INFO] Using worker: sync
+[2024-03-23 23:17:20 +0300] [194821] [INFO] Booting worker with pid: 194821
+[2024-03-23 23:18:05 +0300] [194821] [INFO] Worker exiting (pid: 194821)
+[2024-03-23 23:18:05 +0300] [194819] [INFO] Handling signal: term
+[2024-03-23 23:18:05 +0300] [194819] [WARNING] Worker with pid 194821 was terminated due to signal 15
+[2024-03-23 23:18:05 +0300] [194819] [INFO] Shutting down: Master
+[2024-03-23 23:18:06 +0300] [194878] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:18:06 +0300] [194878] [INFO] Listening at: http://0.0.0.0:5000 (194878)
+[2024-03-23 23:18:06 +0300] [194878] [INFO] Using worker: sync
+[2024-03-23 23:18:06 +0300] [194881] [INFO] Booting worker with pid: 194881
+[2024-03-23 23:18:15 +0300] [194878] [INFO] Handling signal: term
+[2024-03-23 23:18:15 +0300] [194881] [INFO] Worker exiting (pid: 194881)
+[2024-03-23 23:18:15 +0300] [194878] [INFO] Shutting down: Master
+[2024-03-23 23:18:16 +0300] [194923] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:18:16 +0300] [194923] [INFO] Listening at: http://0.0.0.0:5000 (194923)
+[2024-03-23 23:18:16 +0300] [194923] [INFO] Using worker: sync
+[2024-03-23 23:18:16 +0300] [194925] [INFO] Booting worker with pid: 194925
+[2024-03-23 23:18:21 +0300] [194925] [INFO] Worker exiting (pid: 194925)
+[2024-03-23 23:18:21 +0300] [194923] [INFO] Handling signal: term
+[2024-03-23 23:18:21 +0300] [194923] [INFO] Shutting down: Master
+[2024-03-23 23:18:22 +0300] [194956] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:18:22 +0300] [194956] [INFO] Listening at: http://0.0.0.0:5000 (194956)
+[2024-03-23 23:18:22 +0300] [194956] [INFO] Using worker: sync
+[2024-03-23 23:18:22 +0300] [194958] [INFO] Booting worker with pid: 194958
+[2024-03-23 23:18:23,570] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 132, in kill_reg
+    "ovpz_killer": str(ovpz_killer),
+UnboundLocalError: local variable 'ovpz_killer' referenced before assignment
+[2024-03-23 23:18:30 +0300] [194956] [INFO] Handling signal: term
+[2024-03-23 23:18:30 +0300] [194958] [INFO] Worker exiting (pid: 194958)
+[2024-03-23 23:18:30 +0300] [194956] [INFO] Shutting down: Master
+[2024-03-23 23:18:30 +0300] [194995] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:18:30 +0300] [194995] [INFO] Listening at: http://0.0.0.0:5000 (194995)
+[2024-03-23 23:18:30 +0300] [194995] [INFO] Using worker: sync
+[2024-03-23 23:18:30 +0300] [194997] [INFO] Booting worker with pid: 194997
+[2024-03-23 23:18:44 +0300] [194997] [INFO] Worker exiting (pid: 194997)
+[2024-03-23 23:18:44 +0300] [194995] [INFO] Handling signal: term
+[2024-03-23 23:18:44 +0300] [194995] [INFO] Shutting down: Master
+[2024-03-23 23:18:45 +0300] [195044] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:18:45 +0300] [195044] [INFO] Listening at: http://0.0.0.0:5000 (195044)
+[2024-03-23 23:18:45 +0300] [195044] [INFO] Using worker: sync
+[2024-03-23 23:18:45 +0300] [195046] [INFO] Booting worker with pid: 195046
+[2024-03-23 23:18:53 +0300] [195046] [INFO] Worker exiting (pid: 195046)
+[2024-03-23 23:18:53 +0300] [195044] [INFO] Handling signal: term
+[2024-03-23 23:18:53 +0300] [195044] [WARNING] Worker with pid 195046 was terminated due to signal 15
+[2024-03-23 23:18:53 +0300] [195044] [INFO] Shutting down: Master
+[2024-03-23 23:18:54 +0300] [195084] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:18:54 +0300] [195084] [INFO] Listening at: http://0.0.0.0:5000 (195084)
+[2024-03-23 23:18:54 +0300] [195084] [INFO] Using worker: sync
+[2024-03-23 23:18:54 +0300] [195086] [INFO] Booting worker with pid: 195086
+[2024-03-23 23:18:55,198] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 132, in kill_reg
+    "ovpz_killer": str(ovpz_killer),
+UnboundLocalError: local variable 'ovpz_killer' referenced before assignment
+[2024-03-23 23:19:17 +0300] [195086] [INFO] Worker exiting (pid: 195086)
+[2024-03-23 23:19:17 +0300] [195084] [INFO] Handling signal: term
+[2024-03-23 23:19:17 +0300] [195084] [WARNING] Worker with pid 195086 was terminated due to signal 15
+[2024-03-23 23:19:17 +0300] [195084] [INFO] Shutting down: Master
+[2024-03-23 23:19:17 +0300] [195121] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:19:17 +0300] [195121] [INFO] Listening at: http://0.0.0.0:5000 (195121)
+[2024-03-23 23:19:17 +0300] [195121] [INFO] Using worker: sync
+[2024-03-23 23:19:17 +0300] [195123] [INFO] Booting worker with pid: 195123
+[2024-03-23 23:19:26 +0300] [195121] [INFO] Handling signal: term
+[2024-03-23 23:19:26 +0300] [195123] [INFO] Worker exiting (pid: 195123)
+[2024-03-23 23:19:26 +0300] [195121] [INFO] Shutting down: Master
+[2024-03-23 23:19:26 +0300] [195157] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:19:26 +0300] [195157] [INFO] Listening at: http://0.0.0.0:5000 (195157)
+[2024-03-23 23:19:26 +0300] [195157] [INFO] Using worker: sync
+[2024-03-23 23:19:26 +0300] [195162] [INFO] Booting worker with pid: 195162
+[2024-03-23 23:19:31 +0300] [195157] [INFO] Handling signal: term
+[2024-03-23 23:19:31 +0300] [195162] [INFO] Worker exiting (pid: 195162)
+[2024-03-23 23:19:31 +0300] [195157] [WARNING] Worker with pid 195162 was terminated due to signal 15
+[2024-03-23 23:19:31 +0300] [195157] [INFO] Shutting down: Master
+[2024-03-23 23:19:32 +0300] [195183] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:19:32 +0300] [195183] [INFO] Listening at: http://0.0.0.0:5000 (195183)
+[2024-03-23 23:19:32 +0300] [195183] [INFO] Using worker: sync
+[2024-03-23 23:19:32 +0300] [195185] [INFO] Booting worker with pid: 195185
+[2024-03-23 23:19:33,203] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 132, in kill_reg
+    "ovpz_killer": str(ovpz_killer),
+UnboundLocalError: local variable 'ovpz_killer' referenced before assignment
+[2024-03-23 23:19:52 +0300] [195183] [INFO] Handling signal: term
+[2024-03-23 23:19:52 +0300] [195185] [INFO] Worker exiting (pid: 195185)
+[2024-03-23 23:19:52 +0300] [195183] [INFO] Shutting down: Master
+[2024-03-23 23:19:52 +0300] [195221] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:19:52 +0300] [195221] [INFO] Listening at: http://0.0.0.0:5000 (195221)
+[2024-03-23 23:19:52 +0300] [195221] [INFO] Using worker: sync
+[2024-03-23 23:19:52 +0300] [195223] [INFO] Booting worker with pid: 195223
+[2024-03-23 23:30:37 +0300] [195223] [INFO] Worker exiting (pid: 195223)
+[2024-03-23 23:30:37 +0300] [195221] [INFO] Handling signal: term
+[2024-03-23 23:30:37 +0300] [195221] [WARNING] Worker with pid 195223 was terminated due to signal 15
+[2024-03-23 23:30:37 +0300] [195221] [INFO] Shutting down: Master
+[2024-03-23 23:30:37 +0300] [195377] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:30:37 +0300] [195377] [INFO] Listening at: http://0.0.0.0:5000 (195377)
+[2024-03-23 23:30:37 +0300] [195377] [INFO] Using worker: sync
+[2024-03-23 23:30:37 +0300] [195380] [INFO] Booting worker with pid: 195380
+[2024-03-23 23:30:41,938] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 74, in kill_reg
+    return (str(balance_killer_str) + " " + str(balance_killer_str2))
+UnboundLocalError: local variable 'balance_killer_str2' referenced before assignment
+[2024-03-23 23:30:58 +0300] [195380] [INFO] Worker exiting (pid: 195380)
+[2024-03-23 23:30:58 +0300] [195377] [INFO] Handling signal: term
+[2024-03-23 23:30:58 +0300] [195377] [WARNING] Worker with pid 195380 was terminated due to signal 15
+[2024-03-23 23:30:58 +0300] [195377] [INFO] Shutting down: Master
+[2024-03-23 23:30:59 +0300] [195422] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:30:59 +0300] [195422] [INFO] Listening at: http://0.0.0.0:5000 (195422)
+[2024-03-23 23:30:59 +0300] [195422] [INFO] Using worker: sync
+[2024-03-23 23:30:59 +0300] [195424] [INFO] Booting worker with pid: 195424
+[2024-03-23 23:31:48 +0300] [195424] [INFO] Worker exiting (pid: 195424)
+[2024-03-23 23:31:48 +0300] [195422] [INFO] Handling signal: term
+[2024-03-23 23:31:48 +0300] [195422] [WARNING] Worker with pid 195424 was terminated due to signal 15
+[2024-03-23 23:31:48 +0300] [195422] [INFO] Shutting down: Master
+[2024-03-23 23:31:48 +0300] [195462] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:31:48 +0300] [195462] [INFO] Listening at: http://0.0.0.0:5000 (195462)
+[2024-03-23 23:31:48 +0300] [195462] [INFO] Using worker: sync
+[2024-03-23 23:31:48 +0300] [195465] [INFO] Booting worker with pid: 195465
+[2024-03-23 23:31:50,550] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 74, in kill_reg
+    return balance_killer_str2
+UnboundLocalError: local variable 'balance_killer_str2' referenced before assignment
+[2024-03-23 23:32:29 +0300] [195465] [INFO] Worker exiting (pid: 195465)
+[2024-03-23 23:32:29 +0300] [195462] [INFO] Handling signal: term
+[2024-03-23 23:32:29 +0300] [195462] [WARNING] Worker with pid 195465 was terminated due to signal 15
+[2024-03-23 23:32:29 +0300] [195462] [INFO] Shutting down: Master
+[2024-03-23 23:32:29 +0300] [195515] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:32:29 +0300] [195515] [INFO] Listening at: http://0.0.0.0:5000 (195515)
+[2024-03-23 23:32:29 +0300] [195515] [INFO] Using worker: sync
+[2024-03-23 23:32:29 +0300] [195517] [INFO] Booting worker with pid: 195517
+[2024-03-23 23:33:43 +0300] [195515] [INFO] Handling signal: term
+[2024-03-23 23:33:43 +0300] [195517] [INFO] Worker exiting (pid: 195517)
+[2024-03-23 23:33:43 +0300] [195515] [INFO] Shutting down: Master
+[2024-03-23 23:33:43 +0300] [195578] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:33:43 +0300] [195578] [INFO] Listening at: http://0.0.0.0:5000 (195578)
+[2024-03-23 23:33:43 +0300] [195578] [INFO] Using worker: sync
+[2024-03-23 23:33:43 +0300] [195580] [INFO] Booting worker with pid: 195580
+[2024-03-23 23:34:36 +0300] [195580] [INFO] Worker exiting (pid: 195580)
+[2024-03-23 23:34:36 +0300] [195578] [INFO] Handling signal: term
+[2024-03-23 23:34:36 +0300] [195578] [WARNING] Worker with pid 195580 was terminated due to signal 15
+[2024-03-23 23:34:36 +0300] [195578] [INFO] Shutting down: Master
+[2024-03-23 23:34:36 +0300] [195627] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:34:36 +0300] [195627] [INFO] Listening at: http://0.0.0.0:5000 (195627)
+[2024-03-23 23:34:36 +0300] [195627] [INFO] Using worker: sync
+[2024-03-23 23:34:36 +0300] [195629] [INFO] Booting worker with pid: 195629
+[2024-03-23 23:37:03 +0300] [195629] [INFO] Worker exiting (pid: 195629)
+[2024-03-23 23:37:03 +0300] [195627] [INFO] Handling signal: term
+[2024-03-23 23:37:03 +0300] [195627] [WARNING] Worker with pid 195629 was terminated due to signal 15
+[2024-03-23 23:37:03 +0300] [195627] [INFO] Shutting down: Master
+[2024-03-23 23:37:03 +0300] [195718] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:37:03 +0300] [195718] [INFO] Listening at: http://0.0.0.0:5000 (195718)
+[2024-03-23 23:37:03 +0300] [195718] [INFO] Using worker: sync
+[2024-03-23 23:37:03 +0300] [195721] [INFO] Booting worker with pid: 195721
+[2024-03-23 23:37:17 +0300] [195718] [INFO] Handling signal: term
+[2024-03-23 23:37:17 +0300] [195721] [INFO] Worker exiting (pid: 195721)
+[2024-03-23 23:37:17 +0300] [195718] [INFO] Shutting down: Master
+[2024-03-23 23:37:17 +0300] [195764] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:37:17 +0300] [195764] [INFO] Listening at: http://0.0.0.0:5000 (195764)
+[2024-03-23 23:37:17 +0300] [195764] [INFO] Using worker: sync
+[2024-03-23 23:37:17 +0300] [195766] [INFO] Booting worker with pid: 195766
+[2024-03-23 23:37:24 +0300] [195764] [INFO] Handling signal: term
+[2024-03-23 23:37:24 +0300] [195766] [INFO] Worker exiting (pid: 195766)
+[2024-03-23 23:37:24 +0300] [195764] [INFO] Shutting down: Master
+[2024-03-23 23:37:24 +0300] [195812] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:37:24 +0300] [195812] [INFO] Listening at: http://0.0.0.0:5000 (195812)
+[2024-03-23 23:37:24 +0300] [195812] [INFO] Using worker: sync
+[2024-03-23 23:37:24 +0300] [195814] [INFO] Booting worker with pid: 195814
+[2024-03-23 23:38:02 +0300] [195814] [INFO] Worker exiting (pid: 195814)
+[2024-03-23 23:38:02 +0300] [195812] [INFO] Handling signal: term
+[2024-03-23 23:38:02 +0300] [195812] [WARNING] Worker with pid 195814 was terminated due to signal 15
+[2024-03-23 23:38:02 +0300] [195812] [INFO] Shutting down: Master
+[2024-03-23 23:38:02 +0300] [195879] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:38:02 +0300] [195879] [INFO] Listening at: http://0.0.0.0:5000 (195879)
+[2024-03-23 23:38:02 +0300] [195879] [INFO] Using worker: sync
+[2024-03-23 23:38:02 +0300] [195881] [INFO] Booting worker with pid: 195881
+[2024-03-23 23:47:08 +0300] [195881] [INFO] Worker exiting (pid: 195881)
+[2024-03-23 23:47:08 +0300] [195879] [INFO] Handling signal: term
+[2024-03-23 23:47:08 +0300] [195879] [WARNING] Worker with pid 195881 was terminated due to signal 15
+[2024-03-23 23:47:08 +0300] [195879] [INFO] Shutting down: Master
+[2024-03-23 23:47:08 +0300] [196146] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:47:08 +0300] [196146] [INFO] Listening at: http://0.0.0.0:5000 (196146)
+[2024-03-23 23:47:08 +0300] [196146] [INFO] Using worker: sync
+[2024-03-23 23:47:08 +0300] [196151] [INFO] Booting worker with pid: 196151
+[2024-03-23 23:47:38 +0300] [196151] [INFO] Worker exiting (pid: 196151)
+[2024-03-23 23:47:38 +0300] [196146] [INFO] Handling signal: term
+[2024-03-23 23:47:38 +0300] [196146] [WARNING] Worker with pid 196151 was terminated due to signal 15
+[2024-03-23 23:47:38 +0300] [196146] [INFO] Shutting down: Master
+[2024-03-23 23:47:38 +0300] [196200] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:47:38 +0300] [196200] [INFO] Listening at: http://0.0.0.0:5000 (196200)
+[2024-03-23 23:47:38 +0300] [196200] [INFO] Using worker: sync
+[2024-03-23 23:47:38 +0300] [196202] [INFO] Booting worker with pid: 196202
+[2024-03-23 23:47:52 +0300] [196202] [INFO] Worker exiting (pid: 196202)
+[2024-03-23 23:47:52 +0300] [196200] [INFO] Handling signal: term
+[2024-03-23 23:47:52 +0300] [196200] [INFO] Shutting down: Master
+[2024-03-23 23:47:52 +0300] [196239] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:47:52 +0300] [196239] [INFO] Listening at: http://0.0.0.0:5000 (196239)
+[2024-03-23 23:47:52 +0300] [196239] [INFO] Using worker: sync
+[2024-03-23 23:47:52 +0300] [196241] [INFO] Booting worker with pid: 196241
+[2024-03-23 23:48:05 +0300] [196239] [INFO] Handling signal: term
+[2024-03-23 23:48:05 +0300] [196241] [INFO] Worker exiting (pid: 196241)
+[2024-03-23 23:48:05 +0300] [196239] [INFO] Shutting down: Master
+[2024-03-23 23:48:05 +0300] [196289] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:48:05 +0300] [196289] [INFO] Listening at: http://0.0.0.0:5000 (196289)
+[2024-03-23 23:48:05 +0300] [196289] [INFO] Using worker: sync
+[2024-03-23 23:48:05 +0300] [196291] [INFO] Booting worker with pid: 196291
+[2024-03-23 23:48:35 +0300] [196289] [INFO] Handling signal: term
+[2024-03-23 23:48:35 +0300] [196291] [INFO] Worker exiting (pid: 196291)
+[2024-03-23 23:48:35 +0300] [196289] [INFO] Shutting down: Master
+[2024-03-23 23:48:35 +0300] [196342] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:48:35 +0300] [196342] [INFO] Listening at: http://0.0.0.0:5000 (196342)
+[2024-03-23 23:48:35 +0300] [196342] [INFO] Using worker: sync
+[2024-03-23 23:48:35 +0300] [196344] [INFO] Booting worker with pid: 196344
+[2024-03-23 23:48:42 +0300] [196344] [INFO] Worker exiting (pid: 196344)
+[2024-03-23 23:48:42 +0300] [196342] [INFO] Handling signal: term
+[2024-03-23 23:48:42 +0300] [196342] [INFO] Shutting down: Master
+[2024-03-23 23:48:42 +0300] [196382] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:48:42 +0300] [196382] [INFO] Listening at: http://0.0.0.0:5000 (196382)
+[2024-03-23 23:48:42 +0300] [196382] [INFO] Using worker: sync
+[2024-03-23 23:48:42 +0300] [196384] [INFO] Booting worker with pid: 196384
+[2024-03-23 23:52:04 +0300] [196384] [INFO] Worker exiting (pid: 196384)
+[2024-03-23 23:52:04 +0300] [196382] [INFO] Handling signal: term
+[2024-03-23 23:52:04 +0300] [196382] [WARNING] Worker with pid 196384 was terminated due to signal 15
+[2024-03-23 23:52:04 +0300] [196382] [INFO] Shutting down: Master
+[2024-03-23 23:52:04 +0300] [196502] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:52:04 +0300] [196502] [INFO] Listening at: http://0.0.0.0:5000 (196502)
+[2024-03-23 23:52:04 +0300] [196502] [INFO] Using worker: sync
+[2024-03-23 23:52:04 +0300] [196504] [INFO] Booting worker with pid: 196504
+[2024-03-23 23:53:22 +0300] [196504] [INFO] Worker exiting (pid: 196504)
+[2024-03-23 23:53:22 +0300] [196502] [INFO] Handling signal: term
+[2024-03-23 23:53:22 +0300] [196502] [WARNING] Worker with pid 196504 was terminated due to signal 15
+[2024-03-23 23:53:22 +0300] [196502] [INFO] Shutting down: Master
+[2024-03-23 23:53:22 +0300] [196570] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:53:22 +0300] [196570] [INFO] Listening at: http://0.0.0.0:5000 (196570)
+[2024-03-23 23:53:22 +0300] [196570] [INFO] Using worker: sync
+[2024-03-23 23:53:22 +0300] [196573] [INFO] Booting worker with pid: 196573
+[2024-03-23 23:53:50 +0300] [196573] [INFO] Worker exiting (pid: 196573)
+[2024-03-23 23:53:50 +0300] [196570] [INFO] Handling signal: term
+[2024-03-23 23:53:50 +0300] [196570] [WARNING] Worker with pid 196573 was terminated due to signal 15
+[2024-03-23 23:53:50 +0300] [196570] [INFO] Shutting down: Master
+[2024-03-23 23:53:51 +0300] [196623] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:53:51 +0300] [196623] [INFO] Listening at: http://0.0.0.0:5000 (196623)
+[2024-03-23 23:53:51 +0300] [196623] [INFO] Using worker: sync
+[2024-03-23 23:53:51 +0300] [196625] [INFO] Booting worker with pid: 196625
+[2024-03-23 23:54:12 +0300] [196623] [INFO] Handling signal: term
+[2024-03-23 23:54:12 +0300] [196625] [INFO] Worker exiting (pid: 196625)
+[2024-03-23 23:54:12 +0300] [196623] [WARNING] Worker with pid 196625 was terminated due to signal 15
+[2024-03-23 23:54:12 +0300] [196623] [INFO] Shutting down: Master
+[2024-03-23 23:54:13 +0300] [196674] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:54:13 +0300] [196674] [INFO] Listening at: http://0.0.0.0:5000 (196674)
+[2024-03-23 23:54:13 +0300] [196674] [INFO] Using worker: sync
+[2024-03-23 23:54:13 +0300] [196676] [INFO] Booting worker with pid: 196676
+[2024-03-23 23:54:23 +0300] [196674] [INFO] Handling signal: term
+[2024-03-23 23:54:23 +0300] [196676] [INFO] Worker exiting (pid: 196676)
+[2024-03-23 23:54:23 +0300] [196674] [INFO] Shutting down: Master
+[2024-03-23 23:54:23 +0300] [196725] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:54:23 +0300] [196725] [INFO] Listening at: http://0.0.0.0:5000 (196725)
+[2024-03-23 23:54:23 +0300] [196725] [INFO] Using worker: sync
+[2024-03-23 23:54:23 +0300] [196727] [INFO] Booting worker with pid: 196727
+[2024-03-23 23:54:42 +0300] [196725] [INFO] Handling signal: term
+[2024-03-23 23:54:42 +0300] [196727] [INFO] Worker exiting (pid: 196727)
+[2024-03-23 23:54:42 +0300] [196725] [INFO] Shutting down: Master
+[2024-03-23 23:54:42 +0300] [196766] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:54:42 +0300] [196766] [INFO] Listening at: http://0.0.0.0:5000 (196766)
+[2024-03-23 23:54:42 +0300] [196766] [INFO] Using worker: sync
+[2024-03-23 23:54:42 +0300] [196768] [INFO] Booting worker with pid: 196768
+[2024-03-23 23:54:56 +0300] [196768] [INFO] Worker exiting (pid: 196768)
+[2024-03-23 23:54:56 +0300] [196766] [INFO] Handling signal: term
+[2024-03-23 23:54:56 +0300] [196766] [INFO] Shutting down: Master
+[2024-03-23 23:54:56 +0300] [196810] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:54:56 +0300] [196810] [INFO] Listening at: http://0.0.0.0:5000 (196810)
+[2024-03-23 23:54:56 +0300] [196810] [INFO] Using worker: sync
+[2024-03-23 23:54:56 +0300] [196812] [INFO] Booting worker with pid: 196812
+[2024-03-23 23:59:54 +0300] [196812] [INFO] Worker exiting (pid: 196812)
+[2024-03-23 23:59:54 +0300] [196810] [INFO] Handling signal: term
+[2024-03-23 23:59:54 +0300] [196810] [WARNING] Worker with pid 196812 was terminated due to signal 15
+[2024-03-23 23:59:54 +0300] [196810] [INFO] Shutting down: Master
+[2024-03-23 23:59:54 +0300] [196964] [INFO] Starting gunicorn 20.1.0
+[2024-03-23 23:59:54 +0300] [196964] [INFO] Listening at: http://0.0.0.0:5000 (196964)
+[2024-03-23 23:59:54 +0300] [196964] [INFO] Using worker: sync
+[2024-03-23 23:59:54 +0300] [196967] [INFO] Booting worker with pid: 196967
+[2024-03-24 00:00:42 +0300] [196967] [INFO] Worker exiting (pid: 196967)
+[2024-03-24 00:00:42 +0300] [196964] [INFO] Handling signal: term
+[2024-03-24 00:00:42 +0300] [196964] [WARNING] Worker with pid 196967 was terminated due to signal 15
+[2024-03-24 00:00:42 +0300] [196964] [INFO] Shutting down: Master
+[2024-03-24 00:00:42 +0300] [197057] [INFO] Starting gunicorn 20.1.0
+[2024-03-24 00:00:42 +0300] [197057] [INFO] Listening at: http://0.0.0.0:5000 (197057)
+[2024-03-24 00:00:42 +0300] [197057] [INFO] Using worker: sync
+[2024-03-24 00:00:42 +0300] [197059] [INFO] Booting worker with pid: 197059
+[2024-03-24 00:00:57 +0300] [197057] [INFO] Handling signal: term
+[2024-03-24 00:00:57 +0300] [197059] [INFO] Worker exiting (pid: 197059)
+[2024-03-24 00:00:57 +0300] [197057] [INFO] Shutting down: Master
+[2024-03-24 00:00:58 +0300] [197116] [INFO] Starting gunicorn 20.1.0
+[2024-03-24 00:00:58 +0300] [197116] [INFO] Listening at: http://0.0.0.0:5000 (197116)
+[2024-03-24 00:00:58 +0300] [197116] [INFO] Using worker: sync
+[2024-03-24 00:00:58 +0300] [197118] [INFO] Booting worker with pid: 197118
+[2024-03-24 00:20:59 +0300] [197118] [INFO] Worker exiting (pid: 197118)
+[2024-03-24 00:20:59 +0300] [197116] [INFO] Handling signal: term
+[2024-03-24 00:20:59 +0300] [197116] [WARNING] Worker with pid 197118 was terminated due to signal 15
+[2024-03-24 00:20:59 +0300] [197116] [INFO] Shutting down: Master
+[2024-03-24 00:20:59 +0300] [197582] [INFO] Starting gunicorn 20.1.0
+[2024-03-24 00:20:59 +0300] [197582] [INFO] Listening at: http://0.0.0.0:5000 (197582)
+[2024-03-24 00:20:59 +0300] [197582] [INFO] Using worker: sync
+[2024-03-24 00:20:59 +0300] [197585] [INFO] Booting worker with pid: 197585
+[2024-03-24 00:21:38,309] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 128, in kill_reg
+    profit_fetch_float = round((float(ovpz_killer) + float(HdPz_killer_p) + float(profit_fetch_str)), 2)
+UnboundLocalError: local variable 'ovpz_killer' referenced before assignment
+[2024-03-24 00:23:11 +0300] [197585] [INFO] Worker exiting (pid: 197585)
+[2024-03-24 00:23:11 +0300] [197582] [INFO] Handling signal: term
+[2024-03-24 00:23:11 +0300] [197582] [WARNING] Worker with pid 197585 was terminated due to signal 15
+[2024-03-24 00:23:11 +0300] [197582] [INFO] Shutting down: Master
+[2024-03-24 00:23:11 +0300] [197670] [INFO] Starting gunicorn 20.1.0
+[2024-03-24 00:23:11 +0300] [197670] [INFO] Listening at: http://0.0.0.0:5000 (197670)
+[2024-03-24 00:23:11 +0300] [197670] [INFO] Using worker: sync
+[2024-03-24 00:23:11 +0300] [197672] [INFO] Booting worker with pid: 197672
+[2024-03-24 00:23:38,667] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 130, in kill_reg
+    profit_fetch_float = round((float(ovpz_killer) + float(HdPz_killer_p) + float(profit_fetch_str)), 2)
+UnboundLocalError: local variable 'ovpz_killer' referenced before assignment
+[2024-03-24 00:28:03,431] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 130, in kill_reg
+    profit_fetch_float = round((float(ovpz_killer) + float(HdPz_killer_p) + float(profit_fetch_str)), 2)
+UnboundLocalError: local variable 'ovpz_killer' referenced before assignment
+[2024-03-24 00:30:18,742] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 130, in kill_reg
+    profit_fetch_float = round((float(ovpz_killer) + float(HdPz_killer_p) + float(profit_fetch_str)), 2)
+UnboundLocalError: local variable 'ovpz_killer' referenced before assignment
+[2024-03-24 00:30:47,099] ERROR in app: Exception on /kill/ [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/flaskapp/main.py", line 62, in kill_request
+    pdata = kill_reg(conn)
+  File "/home/flaskapp/functions/kill_reg.py", line 130, in kill_reg
+    profit_fetch_float = round((float(ovpz_killer) + float(HdPz_killer_p) + float(profit_fetch_str)), 2)
+UnboundLocalError: local variable 'ovpz_killer' referenced before assignment

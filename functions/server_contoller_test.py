@@ -40,6 +40,7 @@ def server_controller_test(conn):
     elif(enterout == "out"):
         cur.execute("UPDATE dynamic_session_db SET HdPz = '0' WHERE ID = %s", [str(id_fetch)])
         cur.execute("UPDATE dynamic_session_db SET kills = '0' WHERE ID = %s", [str(id_fetch)])
+        cur.execute("UPDATE dynamic_session_db SET profit = '0' WHERE ID = %s", [str(id_fetch)])
         
         if(float(HdPz) != 0):
             HdPz_max = round(float((math.ceil((float(HdPz)/2)*100))/100), 2)
